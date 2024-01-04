@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            touch-action: none;
+        }
+        *{
+            user-select: none;
+        }
+        .btn{
+            width: 50px;
+            height: 50px;
+            background-color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+        }
+        .pad{
+            width: 200px;
+            height: 200px;
+            border: 10px black solid;
+            border-radius: 10000px;
+        }
+        .innerCircle{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 10000px;
+            position: relative;
+            transform: translate(-50%, -50%);
+        }
+        .parent{
+            width: 100%;
+            background-color: aqua;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+
+        <div class="pad" id="pad">    
+            <div class="innerCircle" id="handle"></div>
+        </div>
+        <div class="pad" id="pad1">    
+            <div class="innerCircle" id="handle1"></div>
+        </div>
+    </div>
+
+    <script src="joyStick.js"> </script>
+</body>
+</html>
